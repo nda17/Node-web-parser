@@ -1,0 +1,14 @@
+{
+	"name": "node-web-parser",
+	"version": "0.1.0",
+	"description": "node-web-parser",
+	"scripts": {
+		"start parsing": "node ./src/index.js"
+	},
+	"dependencies": {
+		"axios": "^1.7.5",
+		"cheerio": "^1.0.0",
+		"colors": "^1.4.0",
+		"uniqid": "^5.4.0"
+	}
+}
