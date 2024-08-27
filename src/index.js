@@ -21,10 +21,10 @@ const parser = async () => {
 		const pageNumber = page('li.Paginator_page___fg9G').eq(-1).text()
 
 		console.info('|$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$|'.bgRed)
-		console.info(`|$#$#$#$#$#$#$#$#$#$#$|_START PARSING_|$#$#$#$#$#$#$#$#$#$#$|`.bgRed)
+		console.info('|$#$#$#$#$#$#$#$#$#$#$|_START PARSING_|$#$#$#$#$#$#$#$#$#$#$|'.bgRed)
 		console.info('|$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$|'.bgRed)
 
-		//Цикл запросов к каждой странице (1-200), c получением нужных данных, форматированием и сохранением в сгенерированный файл файл в папке result:
+		//Цикл запросов к каждой странице (1-200), c получением нужных данных, форматированием и сохранением в сгенерированный файл в папке result:
 		for (let i = 1; i <= pageNumber; i++) {
 			const selector = await getHtml(`https://www.litres.ru/new/?languages=en&art_types=text_book&only_litres_exclusives=true&page=${i}`)
 
@@ -37,7 +37,7 @@ const parser = async () => {
 		}
 
 		console.info('|$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$|'.bgRed)
-		console.info(`|$#$#$#$#$#$#$#$#$#$|_PARSING COMPLETED_|$#$#$#$#$#$#$#$#$#$|`.bgRed)
+		console.info('|$#$#$#$#$#$#$#$#$#$|_PARSING COMPLETED_|$#$#$#$#$#$#$#$#$#$|'.bgRed)
 		console.info('|$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$|'.bgRed)
 		console.info(`Result: /result/Parsing-result-${idFileName}.txt`.bgMagenta)
 
